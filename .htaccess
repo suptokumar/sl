@@ -1,0 +1,17 @@
+ErrorDocument 404 http://localhost/
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+order deny,allow
+
+
+
+<FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+	Header set Cache-Control "max-age: 604800, public"
+</FilesMatch>
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^profile/([a-zA-Z0-9\-=&_@\.\,\)\(]*)$ index.php?profile=$1 [NC,L]
+RewriteRule ^search/([a-zA-Z+0-9\-=&_@\.\,\)\(]*)$ index.php?search=$1 [NC,L]
