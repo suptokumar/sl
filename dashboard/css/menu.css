@@ -1,0 +1,269 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: tahoma;
+}
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.nav li a.active {
+  color: white;
+  background-color: #4CAF50;
+}
+.nav .logout a:hover{
+background: red !important;
+}
+@media(max-width: 598px){
+  .nav ul li a{
+    font-size: 13px;
+    padding: 12px 8px;
+  }
+}
+@media(max-width: 440px){
+  .nav ul li a{
+   padding: 12px 6px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 856px)
+{
+  .os{
+    display: block;padding-left: 50px; margin:2px;
+  }
+  .auto_hide {
+    display: none;
+  }
+  .res1 {
+    font-size: 8px;
+  }.res2 {
+    font-size: 10px;
+  }
+  .res1 td{
+    padding: 3px !important;    
+  }
+}
+
+
+
+
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 15px auto;
+}
+@keyframes blurs {
+  0%{
+    filter: blur(50px);
+  }
+  100%{
+    filter: blur(0px);
+  }
+}
+.link_table{
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+.link_table td:first-child {
+  width: 40%;
+}
+.right {
+  float: right;
+}
+.success {
+  border: 2px solid lightgreen;
+  border-radius: 10px;
+  padding: 10px;
+  color: green;
+  text-align: center;
+}
+.ani_top {
+  animation: top_fade .4s;
+}
+.fade {
+  animation: fade .4s;
+}
+@keyframes top_fade{
+  0% {
+    filter: blur(100px);
+    margin-left: -500px;
+  }
+  100%{
+    filter: blur(0px);
+    margin-left: 0px;
+  }
+}
+.rotate {
+  animation: rotate .4s;
+}
+@keyframes rotate{
+  0% {
+    transform: rotateY(360deg);
+  }
+100%{
+    transform: rotateY(0deg);
+  }
+}
+@keyframes fade{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.link {
+  padding: 10px;
+  text-decoration: none;
+  color: #00BBE3;
+  border: 1px solid #00BBE3;
+  margin: 5px;
+}
+.link:hover {
+  background: #00BBE3;
+  color: yellow;
+}
+.link2 {
+  padding: 10px;
+  text-decoration: none;
+  color: #B73C00;
+  border: 1px solid #B73C00;
+  margin: 5px;
+}
+.link2:hover {
+  background: #B73C00;
+  color: yellow;
+}
+.input_table{
+  border-collapse: collapse;
+  animation: blurs .2s;
+  width: 100%;
+  margin-top: 20px;
+}
+.input_table.width td:first-child {
+  width: 40%;
+}
+.input_table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #555;
+  font-family: arial;
+}
+.input {
+  padding: 10px 2%;
+  border: 1px solid #ccc;
+  width: 96%
+}
+.submit {
+  float: right;
+  padding: 10px 40px;
+  font: 17px arial;
+  background: blueviolet;
+  border-radius: 20px;
+  font-size: 20px;
+  color: white;
+}
+@media(max-width:1201px)
+{
+  .container {
+    max-width: 96%;
+  }
+}
+.button {
+  text-decoration: none;
+  color: #555;
+  border-radius: 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  margin: 1px;
+}
+.button.green {
+  background: #73ff34;
+}
+.button.blue {
+  background: #34ffff;
+}
+.button.red {
+  background: #ff4f4f;
+  color: white;
+}.button.yellow {
+  background: #FFCC2F;
+}
+.button:hover {
+  filter: brightness(90%);
+}
+.process {
+  background:linear-gradient(-10deg,#ff9898,#8deb87);
+  color: black;
+  transition: .4s;
+}
+.done {
+  background:linear-gradient(-10deg,orange,orangered);
+  transition: .4s;
+}
+.part {
+  display: inline-block;
+  width:17%;
+  border: 1px solid #20b99d;
+  text-align: center;
+  padding: 20px 1.2%;
+  background: #73ffc8;
+  font-family: tahoma;
+  animation: rotatest 1.4s;
+}
+@keyframes rotatest {
+  0%{
+   color: #73ffc8;
+  }
+}
+@keyframes rotates {
+  0%{
+   transform: rotate(50deg);
+   filter: blur(10px);
+  }
+  80%{
+     transform: rotate(-10deg);
+  }
+}
+.parts {
+  margin-top: 20px;
+  animation: rotates .5s;
+}
+@media (max-width: 1000px)
+{
+  .part {
+    width: 45.3%;
+    margin: 3px auto;
+  }
+  .class_unik {
+    width: 94.5%;
+  }
+}
